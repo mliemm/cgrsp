@@ -94,12 +94,12 @@ All runs are deterministic. Every experiment entry point imports `CGRSP/_repro.p
 If you use this code or data, please cite the thesis:
 
 ```bibtex
-@mastersthesis{michael2027cgrsp,
+@mastersthesis{michael2026cgrsp,
   author  = {Michael},
   title   = {Cloud {GPU} Rendering Scheduling Problem ({CGRSP}): A Mathematical Formulation and Empirical Evaluation on Heterogeneous {GPU} Fleets},
   school  = {National Taiwan University of Science and Technology},
   address = {Taipei, Taiwan},
-  year    = {2027}
+  year    = {2026}
 }
 ```
 
