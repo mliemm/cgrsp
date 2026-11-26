@@ -1,0 +1,88 @@
+\newpage
+\addcontentsline{toc}{chapter}{List of Symbols (符號索引)}
+
+\begin{center}
+{\Huge \textbf{List of Symbols}}\\[0.3em]
+{\LARGE \textbf{符號索引}}
+\end{center}
+
+\vspace{20pt}
+
+\begin{longtable}{l>{\raggedright\arraybackslash}p{10cm}}
+\toprule
+\textbf{Symbol} & \textbf{Description} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+$\calJ$ & Set of all rendering jobs (one job per frame) \\
+$\calN$ & Set of nodes \\
+$\calG$ & Set of resource (GPU) types \\
+$\calK$ & Set of discrete complexity levels \\
+$\calJ_t$ & Set of jobs waiting at time $t$ \\
+$Q$ & Ordered waiting queue containing the jobs in $\calJ_t$ \\
+$j$ & Job index \\
+$m$ & Node index \\
+$t$ & Simulation time, measured in seconds \\
+$g$ & Resource type index \\
+$g(m)$ & Resource type of node $m$ \\
+$g_j$ & Resource type of the node assigned to job $j$: $g(m)$ for the $m$ with $x_j^m = 1$ \\
+$\kappa_j$ & Complexity level of job $j$ \\
+$d_j$ & Deadline of job $j$ \\
+$T_{\text{tight}}, T_{\text{loose}}$ & Tight / loose deadline windows ($3600$\,s / $28800$\,s) \\
+$T_j$ & Deadline window assigned to job $j$: $T_j \in \{T_{\text{tight}}, T_{\text{loose}}\}$ \\
+$t_j^{\text{submit}}$ & Submission time of job $j$ \\
+$t_j^{\text{dispatch}}$ & Dispatch (slot-acquisition) time of job $j$ \\
+$t_j^{\text{start}}$ & Start time of job $j$ \\
+$t_j^{\text{complete}}$ & Completion time of job $j$ \\
+$W(j,g)$ & Realised execution time of job $j$ on GPU type $g$ (log-normal) \\
+$\overline{W}(\kappa,g)$ & Mean (expected) execution time for complexity $\kappa$ on GPU type $g$ \\
+$\overline{W}$ & Mean execution time averaged over the job complexity distribution and equally over GPU types; used only in the offered-load gate \\
+$\sigma_{\kappa,g}$ & Log-space dispersion of execution time within stratum $(\kappa,g)$ \\
+$n_g$ & Number of provisioned nodes of resource type $g$ in the fleet \\
+$p_g$ & Per-second rental price of GPU type $g$ \\
+$s_g(t)$ & Stock status of GPU type $g$ observed at time $t$ (High / Medium / Low) \\
+$s_m$ & Stock status $s_{g(m)}(t)$ observed for node $m$ at the current scheduling event \\
+$u_{g,k}$ & Uniform$(0,1)$ variate of the $k$-th stock-status draw for type $g$ (i.i.d.) \\
+$\tilde s_{g}(t)$ & Stock status of type $g$ realised at dispatch time $t$ by an independent draw; governs the provisioning delay \\
+$\beta_g$ & Baseline high-stock probability of GPU type $g$ \\
+$\phi(t)$ & Time-of-day stock multiplier at time $t$ \\
+$\tau^{\text{prov}}_j$ & Provisioning delay incurred when job $j$ acquires an instance (stock-status dependent; unbilled, counts toward $w_j$) \\
+$L_s, U_s$ & Lower / upper provisioning-delay bounds for stock status $s$ \\
+$p^{H}_g(t), p^{M}_g(t)$ & High-stock probability and Medium-band width (threshold increment) of resource type $g$ at time $t$ \\
+$C_{\max}$ & Number of GPU slots, i.e.\ maximum simultaneous instances (concurrency limit); baseline 5, swept over $\{3, 5, 7, 10\}$ \\
+$\lambda$ & Job arrival rate (jobs/second) \\
+$\rho$ & Offered load: $\lambda \overline{W} / C_{\max}$ \\
+$N_{\text{jobs}}$ & Total number of jobs generated in a simulated day (day-type parameter) \\
+$x_j^m \in \{0,1\}$ & Assignment variable: 1 if job $j$ assigned to node $m$ \\
+$a_m^t \in \{0,1\}$ & Pre-dispatch idle indicator for slot $m$ at time $t$ (1 if free, 0 while held by a job from dispatch to completion) \\
+$w_j$ & Waiting time of job $j$ \\
+$r_j$ & Response time of job $j$ \\
+$\delta_j \in \{0,1\}$ & Deadline adherence: 1 if $t_j^{\text{complete}} \leq d_j$ \\
+$\tau_j$ & Tardiness of job $j$: $\max(0, t_j^{\text{complete}} - d_j)$ \\
+$c_j$ & Execution cost of job $j$ \\
+$\Delta_{\text{miss}}$ & Deadline miss rate: $\frac{1}{|\calJ|}\sum_j (1-\delta_j)$ \\
+$C_{\text{QoS}}$ & QoS cost component, the primary lexicographic criterion: $\sum_j [\alpha_1 w_j + \alpha_2 (1-\delta_j)]$ \\
+$C_{\text{Cost}}$ & Operational cost component, the secondary (tiebreaking) criterion: $\sum_j c_j$ \\
+$\alpha_1, \alpha_2$ & QoS penalty weights inside $C_{\text{QoS}}$ (per second of waiting, per missed deadline) \\
+$w_{\text{qos}}, w_{\text{cost}}$ & Scalarisation weights (weighted-sum robustness variant; RH placement surrogate) \\
+$\theta$ & SPT+Rescue laxity threshold (600\,s) \\
+$\theta_{\text{eff}}$ & Adaptive's queue-pressure-widened threshold ($=\theta$ normally, $=T_{\text{loose}}$ when $|Q| > P$) \\
+$w_c$ & SPT-family node-selection cost weight (0.3) \\
+$w_b$ & Balanced speed-cost weight (0.8) \\
+$\psi(s_m)$ & LCF multiplicative stock-status penalty ($\{1.0, 1.05, 1.15\}$) \\
+$\text{sp}(s_m)$ & SPT/Balanced-family additive stock-status penalty ($\{0, 0.2, 1.0\}$) \\
+$I$ & Set of currently idle nodes at a scheduling event \\
+$\mu_{\kappa,g}$ & Log-space location of the execution-time distribution of stratum $(\kappa,g)$: $\ln \overline{W}(\kappa,g) - \tfrac{1}{2}\sigma_{\kappa,g}^2$ \\
+$\overline{W}_{\min}(j), \overline{W}_{\max}(j)$ & Fastest / slowest expected execution time of job $j$ over the candidate nodes (SPT family: idle nodes; Balanced: whole fleet) \\
+$p_{\min}, p_{\max}$ & Cheapest / dearest per-second rate over the same candidate set \\
+$c_{\text{eff}}(j,m)$ & LCF effective cost of placing job $j$ on node $m$: $p_{g(m)}\,\overline{W}(\kappa_j, g(m))\,\psi(s_m)$ \\
+$L_j(t)$ & Laxity of job $j$ at time $t$: $d_j - t - \min_{m \in I} \overline{W}(\kappa_j, g(m))$ over the idle-node set $I$ \\
+$e_j$ & Planning estimate for job $j$: minimum expected execution time over idle capable nodes at the current scheduling event \\
+$t_{\text{free}}$ & Soonest time a slot frees for a job not dispatched now (Rolling-Horizon) \\
+$\rho_{\text{res}}$ & Rolling-Horizon reservation count: idle slots held for anticipated tight arrivals (1) \\
+$\rho_{\text{gate}}$ & Offered-load gate above which anticipation is disabled (0.95) \\
+$\mathrm{CR}_j(t)$ & Critical ratio of job $j$ at time $t$: $(d_j - t)/e_j$ (CADR) \\
+$\mathrm{CR}^*$ & CADR critical-ratio threshold separating at-risk from safe jobs (3) \\
+$P$ & Adaptive queue-pressure threshold: backlog size above which the urgent tier widens (10) \\
+\end{longtable}

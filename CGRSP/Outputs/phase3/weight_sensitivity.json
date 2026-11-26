@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "n_jobs": 950,
+    "arrival_rate": 0.1,
+    "n_seeds": 10,
+    "concurrency": 5,
+    "wcost_values": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "alpha2_values": [
+      1,
+      5,
+      10,
+      20,
+      50
+    ],
+    "base_alpha1": 1.0,
+    "base_alpha2": 10.0,
+    "note": "QoS uses seconds and missed-job fractions; components are min-max normalised across six schedulers before weighting.",
+    "elapsed_sec": 61.1
+  },
+  "raw": {
+    "FIFO": {
+      "mean_wait_s": 9945.858222666382,
+      "mean_miss_fraction": 0.23673684210526313,
+      "mean_total_wait_s": 9448565.311533064,
+      "mean_total_tard_s": 1411126.7162701534,
+      "mean_total_cost": 6.3926693648614314,
+      "avg_wait_min": 165.7643,
+      "miss_pct": 23.6737,
+      "mean_tard_min": 24.7566
+    },
+    "SPT": {
+      "mean_wait_s": 8258.27100743803,
+      "mean_miss_fraction": 0.1765263157894737,
+      "mean_total_wait_s": 7845357.457066131,
+      "mean_total_tard_s": 611839.0294489376,
+      "mean_total_cost": 6.357027553449193,
+      "avg_wait_min": 137.6379,
+      "miss_pct": 17.6526,
+      "mean_tard_min": 10.734
+    },
+    "EDF": {
+      "mean_wait_s": 10101.028253204779,
+      "mean_miss_fraction": 0.12684210526315787,
+      "mean_total_wait_s": 9595976.840544539,
+      "mean_total_tard_s": 241442.4099403561,
+      "mean_total_cost": 6.3886243496247035,
+      "avg_wait_min": 168.3505,
+      "miss_pct": 12.6842,
+      "mean_tard_min": 4.2358
+    },
+    "SPT+Rescue": {
+      "mean_wait_s": 8682.410531925148,
+      "mean_miss_fraction": 0.13473684210526315,
+      "mean_total_wait_s": 8248290.005328889,
+      "mean_total_tard_s": 339038.70847088646,
+      "mean_total_cost": 6.337766949455849,
+      "avg_wait_min": 144.7068,
+      "miss_pct": 13.4737,
+      "mean_tard_min": 5.9481
+    },
+    "RH": {
+      "mean_wait_s": 8369.774493656172,
+      "mean_miss_fraction": 0.08463157894736842,
+      "mean_total_wait_s": 7951285.768973364,
+      "mean_total_tard_s": 1759784.1556121358,
+      "mean_total_cost": 6.374334327526325,
+      "avg_wait_min": 139.4963,
+      "miss_pct": 8.4631,
+      "mean_tard_min": 30.8734
+    },
+    "CADR": {
+      "mean_wait_s": 8567.931280552217,
+      "mean_miss_fraction": 0.0928421052631579,
+      "mean_total_wait_s": 8139534.716524607,
+      "mean_total_tard_s": 307161.08960853866,
+      "mean_total_cost": 6.378179913560259,
+      "avg_wait_min": 142.7989,
+      "miss_pct": 9.2842,
+      "mean_tard_min": 5.3888
+    }
+  },
+  "sweep_wcost": {
+    "0.1": {
+      "w_qos": 0.9,
+      "w_cost": 0.1,
+      "composite": {
+        "FIFO": 0.9247,
+        "SPT": 0.0351,
+        "EDF": 0.9926,
+        "SPT+Rescue": 0.207,
+        "RH": 0.1206,
+        "CADR": 0.2245
+      },
+      "winner": "SPT"
+    },
+    "0.3": {
+      "w_qos": 0.7,
+      "w_cost": 0.3,
+      "composite": {
+        "FIFO": 0.9415,
+        "SPT": 0.1052,
+        "EDF": 0.9779,
+        "SPT+Rescue": 0.161,
+        "RH": 0.2418,
+        "CADR": 0.3382
+      },
+      "winner": "SPT"
+    },
+    "0.5": {
+      "w_qos": 0.5,
+      "w_cost": 0.5,
+      "composite": {
+        "FIFO": 0.9582,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.115,
+        "RH": 0.363,
+        "CADR": 0.4519
+      },
+      "winner": "SPT+Rescue"
+    },
+    "0.7": {
+      "w_qos": 0.3,
+      "w_cost": 0.7,
+      "composite": {
+        "FIFO": 0.9749,
+        "SPT": 0.2456,
+        "EDF": 0.9484,
+        "SPT+Rescue": 0.069,
+        "RH": 0.4842,
+        "CADR": 0.5656
+      },
+      "winner": "SPT+Rescue"
+    },
+    "0.9": {
+      "w_qos": 0.1,
+      "w_cost": 0.9,
+      "composite": {
+        "FIFO": 0.9916,
+        "SPT": 0.3157,
+        "EDF": 0.9337,
+        "SPT+Rescue": 0.023,
+        "RH": 0.6054,
+        "CADR": 0.6792
+      },
+      "winner": "SPT+Rescue"
+    }
+  },
+  "sweep_alpha2": {
+    "1": {
+      "alpha2_over_alpha1": 1,
+      "composite": {
+        "FIFO": 0.9579,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.1151,
+        "RH": 0.3633,
+        "CADR": 0.452
+      },
+      "winner": "SPT+Rescue"
+    },
+    "5": {
+      "alpha2_over_alpha1": 5,
+      "composite": {
+        "FIFO": 0.958,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.115,
+        "RH": 0.3632,
+        "CADR": 0.452
+      },
+      "winner": "SPT+Rescue"
+    },
+    "10": {
+      "alpha2_over_alpha1": 10,
+      "composite": {
+        "FIFO": 0.9582,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.115,
+        "RH": 0.363,
+        "CADR": 0.4519
+      },
+      "winner": "SPT+Rescue"
+    },
+    "20": {
+      "alpha2_over_alpha1": 20,
+      "composite": {
+        "FIFO": 0.9585,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.1149,
+        "RH": 0.3628,
+        "CADR": 0.4517
+      },
+      "winner": "SPT+Rescue"
+    },
+    "50": {
+      "alpha2_over_alpha1": 50,
+      "composite": {
+        "FIFO": 0.9593,
+        "SPT": 0.1754,
+        "EDF": 0.9632,
+        "SPT+Rescue": 0.1147,
+        "RH": 0.3621,
+        "CADR": 0.451
+      },
+      "winner": "SPT+Rescue"
+    }
+  },
+  "tardiness_objective": {
+    "1": {
+      "alpha2_over_alpha1": 1,
+      "composite": {
+        "FIFO": 1.0,
+        "SPT": 0.1776,
+        "EDF": 0.7513,
+        "SPT+Rescue": 0.0291,
+        "RH": 0.595,
+        "CADR": 0.368
+      },
+      "winner": "SPT+Rescue"
+    },
+    "5": {
+      "alpha2_over_alpha1": 5,
+      "composite": {
+        "FIFO": 0.9826,
+        "SPT": 0.2623,
+        "EDF": 0.5429,
+        "SPT+Rescue": 0.019,
+        "RH": 0.833,
+        "CADR": 0.368
+      },
+      "winner": "SPT+Rescue"
+    },
+    "10": {
+      "alpha2_over_alpha1": 10,
+      "composite": {
+        "FIFO": 0.9306,
+        "SPT": 0.2714,
+        "EDF": 0.491,
+        "SPT+Rescue": 0.0149,
+        "RH": 0.833,
+        "CADR": 0.368
+      },
+      "winner": "SPT+Rescue"
+    },
+    "20": {
+      "alpha2_over_alpha1": 20,
+      "composite": {
+        "FIFO": 0.9051,
+        "SPT": 0.2759,
+        "EDF": 0.4656,
+        "SPT+Rescue": 0.0129,
+        "RH": 0.833,
+        "CADR": 0.368
+      },
+      "winner": "SPT+Rescue"
+    },
+    "50": {
+      "alpha2_over_alpha1": 50,
+      "composite": {
+        "FIFO": 0.8927,
+        "SPT": 0.2883,
+        "EDF": 0.4632,
+        "SPT+Rescue": 0.0238,
+        "RH": 0.833,
+        "CADR": 0.3804
+      },
+      "winner": "SPT+Rescue"
+    }
+  }
+}

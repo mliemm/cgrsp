@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "n_jobs": 950,
+    "arrival_rate": 0.1,
+    "cmax_values": [
+      3,
+      5,
+      7,
+      10
+    ],
+    "n_seeds": 10,
+    "elapsed_sec": 215.8
+  },
+  "results": {
+    "cmax3": {
+      "cmax": 3,
+      "n_seeds": 10,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 387.0877,
+          "avg_miss_pct": 57.3368,
+          "std_wait_min": 14.153,
+          "std_miss_pct": 2.1175
+        },
+        "SPT": {
+          "avg_wait_min": 358.5659,
+          "avg_miss_pct": 51.5684,
+          "std_wait_min": 11.3004,
+          "std_miss_pct": 2.8666
+        },
+        "EDF": {
+          "avg_wait_min": 394.4425,
+          "avg_miss_pct": 51.579,
+          "std_wait_min": 8.4173,
+          "std_miss_pct": 1.5786
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 372.1201,
+          "avg_miss_pct": 49.6947,
+          "std_wait_min": 8.6453,
+          "std_miss_pct": 2.2612
+        },
+        "RH": {
+          "avg_wait_min": 364.8547,
+          "avg_miss_pct": 46.3263,
+          "std_wait_min": 7.8703,
+          "std_miss_pct": 2.2133
+        },
+        "CADR": {
+          "avg_wait_min": 375.2641,
+          "avg_miss_pct": 48.421,
+          "std_wait_min": 15.1692,
+          "std_miss_pct": 1.5311
+        },
+        "Adaptive": {
+          "avg_wait_min": 395.6383,
+          "avg_miss_pct": 50.4737,
+          "std_wait_min": 12.4045,
+          "std_miss_pct": 1.9379
+        }
+      }
+    },
+    "cmax5": {
+      "cmax": 5,
+      "n_seeds": 10,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 165.7643,
+          "avg_miss_pct": 23.6737,
+          "std_wait_min": 13.511,
+          "std_miss_pct": 4.579
+        },
+        "SPT": {
+          "avg_wait_min": 137.6379,
+          "avg_miss_pct": 17.6526,
+          "std_wait_min": 13.3256,
+          "std_miss_pct": 4.9103
+        },
+        "EDF": {
+          "avg_wait_min": 168.3505,
+          "avg_miss_pct": 12.6842,
+          "std_wait_min": 11.1228,
+          "std_miss_pct": 5.169
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 144.7068,
+          "avg_miss_pct": 13.4737,
+          "std_wait_min": 8.5933,
+          "std_miss_pct": 2.2615
+        },
+        "RH": {
+          "avg_wait_min": 139.4963,
+          "avg_miss_pct": 8.4631,
+          "std_wait_min": 12.0248,
+          "std_miss_pct": 3.3582
+        },
+        "CADR": {
+          "avg_wait_min": 142.7989,
+          "avg_miss_pct": 9.2842,
+          "std_wait_min": 9.2563,
+          "std_miss_pct": 3.9357
+        },
+        "Adaptive": {
+          "avg_wait_min": 166.2906,
+          "avg_miss_pct": 11.4842,
+          "std_wait_min": 11.8718,
+          "std_miss_pct": 4.4567
+        }
+      }
+    },
+    "cmax7": {
+      "cmax": 7,
+      "n_seeds": 10,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 44.7083,
+          "avg_miss_pct": 6.3263,
+          "std_wait_min": 3.285,
+          "std_miss_pct": 0.8841
+        },
+        "SPT": {
+          "avg_wait_min": 38.7238,
+          "avg_miss_pct": 2.7579,
+          "std_wait_min": 2.5611,
+          "std_miss_pct": 1.3229
+        },
+        "EDF": {
+          "avg_wait_min": 44.5806,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 3.2246,
+          "std_miss_pct": 0.0
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 38.9689,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 3.0241,
+          "std_miss_pct": 0.0
+        },
+        "RH": {
+          "avg_wait_min": 38.5291,
+          "avg_miss_pct": 2.0316,
+          "std_wait_min": 3.3649,
+          "std_miss_pct": 1.4737
+        },
+        "CADR": {
+          "avg_wait_min": 38.8414,
+          "avg_miss_pct": 0.0105,
+          "std_wait_min": 3.1918,
+          "std_miss_pct": 0.0333
+        },
+        "Adaptive": {
+          "avg_wait_min": 44.0733,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 3.5393,
+          "std_miss_pct": 0.0
+        }
+      }
+    },
+    "cmax10": {
+      "cmax": 10,
+      "n_seeds": 10,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 8.5195,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.7779,
+          "std_miss_pct": 0.0
+        },
+        "SPT": {
+          "avg_wait_min": 8.0647,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.4435,
+          "std_miss_pct": 0.0
+        },
+        "EDF": {
+          "avg_wait_min": 8.9642,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.9875,
+          "std_miss_pct": 0.0
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 8.0647,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.4435,
+          "std_miss_pct": 0.0
+        },
+        "RH": {
+          "avg_wait_min": 13.053,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.9807,
+          "std_miss_pct": 0.0
+        },
+        "CADR": {
+          "avg_wait_min": 7.4059,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.7181,
+          "std_miss_pct": 0.0
+        },
+        "Adaptive": {
+          "avg_wait_min": 8.7121,
+          "avg_miss_pct": 0.0,
+          "std_wait_min": 2.7585,
+          "std_miss_pct": 0.0
+        }
+      }
+    }
+  }
+}

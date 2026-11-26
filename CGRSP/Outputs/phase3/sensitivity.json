@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "concurrency": 5,
+    "day_types": [
+      "quiet",
+      "normal",
+      "hectic",
+      "surge"
+    ],
+    "n_seeds": 30,
+    "duration_hr": 24.0,
+    "total_runs": 1200,
+    "elapsed_sec": 361.5
+  },
+  "sensitivity": {
+    "fleet5_typequiet": {
+      "fleet_size": 5,
+      "day_type": "quiet",
+      "n_jobs": 6,
+      "arrival_rate": 0.0008,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 0.6868,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0551,
+          "utilization_pct": 9.4623,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "SPT": {
+          "avg_wait_min": 0.5095,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.032,
+          "utilization_pct": 9.1397,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "EDF": {
+          "avg_wait_min": 0.5498,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0394,
+          "utilization_pct": 9.2473,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "LCF": {
+          "avg_wait_min": 0.4856,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0314,
+          "utilization_pct": 9.2473,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "Balanced": {
+          "avg_wait_min": 0.5078,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.034,
+          "utilization_pct": 9.2473,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "Random": {
+          "avg_wait_min": 0.5867,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0414,
+          "utilization_pct": 9.3548,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 0.5095,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.032,
+          "utilization_pct": 9.1397,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "RH": {
+          "avg_wait_min": 0.4643,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0325,
+          "utilization_pct": 9.3548,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "CADR": {
+          "avg_wait_min": 0.5071,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.0313,
+          "utilization_pct": 9.1397,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        },
+        "Adaptive": {
+          "avg_wait_min": 0.5095,
+          "avg_miss_pct": 0.0,
+          "total_cost": 0.032,
+          "utilization_pct": 9.1397,
+          "avg_tardiness_min": 0.0,
+          "p95_tardiness_min": 0.0
+        }
+      }
+    },
+    "fleet5_typenormal": {
+      "fleet_size": 5,
+      "day_type": "normal",
+      "n_jobs": 100,
+      "arrival_rate": 0.002,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 7.1905,
+          "avg_miss_pct": 1.2,
+          "total_cost": 0.7673,
+          "utilization_pct": 27.7206,
+          "avg_tardiness_min": 0.3235,
+          "p95_tardiness_min": 0.0
+        },
+        "SPT": {
+          "avg_wait_min": 4.9519,
+          "avg_miss_pct": 0.9667,
+          "total_cost": 0.5468,
+          "utilization_pct": 22.4085,
+          "avg_tardiness_min": 0.2244,
+          "p95_tardiness_min": 0.0
+        },
+        "EDF": {
+          "avg_wait_min": 6.1658,
+          "avg_miss_pct": 1.2,
+          "total_cost": 0.6404,
+          "utilization_pct": 25.5063,
+          "avg_tardiness_min": 0.3399,
+          "p95_tardiness_min": 0.0
+        },
+        "LCF": {
+          "avg_wait_min": 4.6805,
+          "avg_miss_pct": 0.7333,
+          "total_cost": 0.5362,
+          "utilization_pct": 21.344,
+          "avg_tardiness_min": 0.1746,
+          "p95_tardiness_min": 0.0
+        },
+        "Balanced": {
+          "avg_wait_min": 5.0613,
+          "avg_miss_pct": 0.8333,
+          "total_cost": 0.5641,
+          "utilization_pct": 22.9022,
+          "avg_tardiness_min": 0.2001,
+          "p95_tardiness_min": 0.0
+        },
+        "Random": {
+          "avg_wait_min": 6.6848,
+          "avg_miss_pct": 0.8667,
+          "total_cost": 0.6794,
+          "utilization_pct": 26.5083,
+          "avg_tardiness_min": 0.2616,
+          "p95_tardiness_min": 0.0
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 4.9519,
+          "avg_miss_pct": 0.9667,
+          "total_cost": 0.5468,
+          "utilization_pct": 22.4085,
+          "avg_tardiness_min": 0.2244,
+          "p95_tardiness_min": 0.0
+        },
+        "RH": {
+          "avg_wait_min": 4.3182,
+          "avg_miss_pct": 0.8,
+          "total_cost": 0.5481,
+          "utilization_pct": 20.6773,
+          "avg_tardiness_min": 0.2212,
+          "p95_tardiness_min": 0.0
+        },
+        "CADR": {
+          "avg_wait_min": 4.4764,
+          "avg_miss_pct": 0.7333,
+          "total_cost": 0.5381,
+          "utilization_pct": 21.4358,
+          "avg_tardiness_min": 0.1966,
+          "p95_tardiness_min": 0.0
+        },
+        "Adaptive": {
+          "avg_wait_min": 4.9519,
+          "avg_miss_pct": 0.9667,
+          "total_cost": 0.5468,
+          "utilization_pct": 22.4085,
+          "avg_tardiness_min": 0.2244,
+          "p95_tardiness_min": 0.0
+        }
+      }
+    },
+    "fleet5_typehectic": {
+      "fleet_size": 5,
+      "day_type": "hectic",
+      "n_jobs": 950,
+      "arrival_rate": 0.1,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 167.9262,
+          "avg_miss_pct": 24.4281,
+          "total_cost": 6.4032,
+          "utilization_pct": 95.7245,
+          "avg_tardiness_min": 26.0101,
+          "p95_tardiness_min": 146.7179
+        },
+        "SPT": {
+          "avg_wait_min": 141.4486,
+          "avg_miss_pct": 18.9649,
+          "total_cost": 6.3441,
+          "utilization_pct": 95.723,
+          "avg_tardiness_min": 12.018,
+          "p95_tardiness_min": 68.4217
+        },
+        "EDF": {
+          "avg_wait_min": 170.2224,
+          "avg_miss_pct": 14.7053,
+          "total_cost": 6.4118,
+          "utilization_pct": 95.7217,
+          "avg_tardiness_min": 5.1623,
+          "p95_tardiness_min": 38.856
+        },
+        "LCF": {
+          "avg_wait_min": 166.915,
+          "avg_miss_pct": 24.2421,
+          "total_cost": 6.3715,
+          "utilization_pct": 95.723,
+          "avg_tardiness_min": 25.2519,
+          "p95_tardiness_min": 143.6942
+        },
+        "Balanced": {
+          "avg_wait_min": 168.5936,
+          "avg_miss_pct": 25.2456,
+          "total_cost": 6.3785,
+          "utilization_pct": 95.7214,
+          "avg_tardiness_min": 26.6643,
+          "p95_tardiness_min": 141.3261
+        },
+        "Random": {
+          "avg_wait_min": 167.6834,
+          "avg_miss_pct": 23.4386,
+          "total_cost": 6.3842,
+          "utilization_pct": 95.7222,
+          "avg_tardiness_min": 32.8876,
+          "p95_tardiness_min": 191.0573
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 146.3207,
+          "avg_miss_pct": 13.5649,
+          "total_cost": 6.3671,
+          "utilization_pct": 95.723,
+          "avg_tardiness_min": 5.8896,
+          "p95_tardiness_min": 45.4417
+        },
+        "RH": {
+          "avg_wait_min": 141.6991,
+          "avg_miss_pct": 9.5965,
+          "total_cost": 6.3548,
+          "utilization_pct": 95.7209,
+          "avg_tardiness_min": 31.8397,
+          "p95_tardiness_min": 402.6805
+        },
+        "CADR": {
+          "avg_wait_min": 144.6636,
+          "avg_miss_pct": 9.6842,
+          "total_cost": 6.3614,
+          "utilization_pct": 95.7219,
+          "avg_tardiness_min": 5.9541,
+          "p95_tardiness_min": 56.4016
+        },
+        "Adaptive": {
+          "avg_wait_min": 169.6676,
+          "avg_miss_pct": 12.6211,
+          "total_cost": 6.3861,
+          "utilization_pct": 95.723,
+          "avg_tardiness_min": 4.9074,
+          "p95_tardiness_min": 40.7044
+        }
+      }
+    },
+    "fleet5_typesurge": {
+      "fleet_size": 5,
+      "day_type": "surge",
+      "n_jobs": 730,
+      "arrival_rate": 0.02,
+      "schedulers": {
+        "FIFO": {
+          "avg_wait_min": 96.3958,
+          "avg_miss_pct": 10.7352,
+          "total_cost": 4.8921,
+          "utilization_pct": 77.5245,
+          "avg_tardiness_min": 12.6377,
+          "p95_tardiness_min": 127.6218
+        },
+        "SPT": {
+          "avg_wait_min": 96.7309,
+          "avg_miss_pct": 7.0457,
+          "total_cost": 4.668,
+          "utilization_pct": 77.2612,
+          "avg_tardiness_min": 10.3936,
+          "p95_tardiness_min": 71.5153
+        },
+        "EDF": {
+          "avg_wait_min": 99.2291,
+          "avg_miss_pct": 1.5799,
+          "total_cost": 4.8535,
+          "utilization_pct": 77.5497,
+          "avg_tardiness_min": 0.5478,
+          "p95_tardiness_min": 0.016
+        },
+        "LCF": {
+          "avg_wait_min": 98.8017,
+          "avg_miss_pct": 10.8402,
+          "total_cost": 4.6391,
+          "utilization_pct": 77.1188,
+          "avg_tardiness_min": 13.1318,
+          "p95_tardiness_min": 129.2284
+        },
+        "Balanced": {
+          "avg_wait_min": 94.8668,
+          "avg_miss_pct": 10.6895,
+          "total_cost": 4.6776,
+          "utilization_pct": 77.364,
+          "avg_tardiness_min": 12.3348,
+          "p95_tardiness_min": 123.7634
+        },
+        "Random": {
+          "avg_wait_min": 97.9652,
+          "avg_miss_pct": 9.4064,
+          "total_cost": 4.8688,
+          "utilization_pct": 77.5351,
+          "avg_tardiness_min": 13.6782,
+          "p95_tardiness_min": 122.2251
+        },
+        "SPT+Rescue": {
+          "avg_wait_min": 95.3876,
+          "avg_miss_pct": 3.4612,
+          "total_cost": 4.68,
+          "utilization_pct": 77.2612,
+          "avg_tardiness_min": 1.1236,
+          "p95_tardiness_min": 2.2026
+        },
+        "RH": {
+          "avg_wait_min": 108.7596,
+          "avg_miss_pct": 1.3288,
+          "total_cost": 4.4644,
+          "utilization_pct": 70.0548,
+          "avg_tardiness_min": 0.7304,
+          "p95_tardiness_min": 0.0
+        },
+        "CADR": {
+          "avg_wait_min": 95.3922,
+          "avg_miss_pct": 3.9589,
+          "total_cost": 4.6654,
+          "utilization_pct": 77.1739,
+          "avg_tardiness_min": 6.4654,
+          "p95_tardiness_min": 5.2224
+        },
+        "Adaptive": {
+          "avg_wait_min": 96.4007,
+          "avg_miss_pct": 1.4795,
+          "total_cost": 4.6579,
+          "utilization_pct": 77.2612,
+          "avg_tardiness_min": 0.8944,
+          "p95_tardiness_min": 0.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "n_jobs": 950,
+    "arrival_rate": 0.1,
+    "cr_star_values": [
+      1.5,
+      2.0,
+      3.0,
+      5.0,
+      10.0
+    ],
+    "n_seeds": 10,
+    "elapsed_sec": 43.1
+  },
+  "results": {
+    "1.5": {
+      "cr_star": 1.5,
+      "n_seeds": 10,
+      "avg_wait_min": 142.9357,
+      "avg_miss_pct": 11.4737,
+      "avg_tardiness_min": 6.8043,
+      "std_wait_min": 13.6301,
+      "std_miss_pct": 4.7479,
+      "std_tardiness_min": 5.3872
+    },
+    "2.0": {
+      "cr_star": 2.0,
+      "n_seeds": 10,
+      "avg_wait_min": 142.3372,
+      "avg_miss_pct": 10.1368,
+      "avg_tardiness_min": 4.8387,
+      "std_wait_min": 12.3355,
+      "std_miss_pct": 4.1718,
+      "std_tardiness_min": 4.2807
+    },
+    "3.0": {
+      "cr_star": 3.0,
+      "n_seeds": 10,
+      "avg_wait_min": 142.7989,
+      "avg_miss_pct": 9.2842,
+      "avg_tardiness_min": 5.3888,
+      "std_wait_min": 9.2563,
+      "std_miss_pct": 3.9357,
+      "std_tardiness_min": 3.0528
+    },
+    "5.0": {
+      "cr_star": 5.0,
+      "n_seeds": 10,
+      "avg_wait_min": 143.9438,
+      "avg_miss_pct": 9.9579,
+      "avg_tardiness_min": 6.0951,
+      "std_wait_min": 10.1768,
+      "std_miss_pct": 3.0242,
+      "std_tardiness_min": 3.7516
+    },
+    "10.0": {
+      "cr_star": 10.0,
+      "n_seeds": 10,
+      "avg_wait_min": 145.0989,
+      "avg_miss_pct": 10.0526,
+      "avg_tardiness_min": 6.2195,
+      "std_wait_min": 8.6767,
+      "std_miss_pct": 2.955,
+      "std_tardiness_min": 3.5444
+    }
+  }
+}

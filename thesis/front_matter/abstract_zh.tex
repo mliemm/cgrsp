@@ -1,0 +1,19 @@
+\newpage
+\addcontentsline{toc}{chapter}{摘要 (Chinese Abstract)}
+
+\begin{center}
+{\fontsize{20}{24}\selectfont\textbf{摘　要}}
+\end{center}
+
+\vspace{20pt}
+
+本論文提出雲端GPU渲染排程問題（CGRSP）：在節點可用性不確定、截止期限不同的條件下，將批次三維渲染任務（每項任務為一個完整影格）指派至異質隨需GPU。目標以等待時間與軟性截止期限違反為優先，租用成本為次要準則。GPU速度依RunPod執行紀錄校準，各型號可用性則為庫存狀態假設模型，故排程結果皆來自模擬。
+
+以6,234筆RunPod Serverless任務建構Python離散事件模擬器，於四階段比較十種策略，包括八種基準策略及本研究提出之滾動視界（RH）與成本感知截止期限風險（CADR）排程器。任務期限分為緊急一小時與寬鬆八小時。
+
+假設壅塞日約950件任務（實際紀錄最繁忙日415件）、五個並行槽位時，RH的違反率點估計最低（\RHMiss\%，與CADR無統計差異），等待時間亦與SPT無統計差異。未飽和時，RH保留閒置容量，使湧浪日違反率由\ResSurgeOffMiss\%降至\ResSurgeOnMiss\%；飽和時停止保留。CADR違反率為\CADRmiss\%，平均延遲\CADRtard~分鐘，低於RH的\RHtard~分鐘。SPT等待時間低，但違反率顯著高於EDF（\SPTmiss\%對\EDFmiss\%）。
+
+CADR因基準違反率與RH無統計差異、延遲時間較低，適合作為預設策略；稀缺可用性下若僅重視違反件數，可選RH；優先降低等待時間則可選SPT。飽和時提高並行上限可減少剩餘違反。上述結論受假設負載與GPU可用性模型限制。
+
+\vspace{0.5cm}
+\noindent\textbf{關鍵詞：}雲端GPU排程、異質GPU叢集、離散事件模擬、截止期限感知排程、RunPod Secure Cloud、三維渲染工作負載

@@ -1,0 +1,26 @@
+%% ============================================================
+%% NTUST Master's Thesis - Signature Forms (submitted separately
+%% from the bound thesis: advisor recommendation, committee
+%% qualification, and library authorization)
+%% ============================================================
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{ragged2e}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=3]{cwTeX Q Kai}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\input{front_matter/recommendation}
+\input{front_matter/committee}
+\input{front_matter/authorization}
+
+\end{document}

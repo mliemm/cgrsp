@@ -1,0 +1,15 @@
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Scheduler} & \textbf{Avg Wait (min)} & \textbf{Miss \%} & \textbf{Avg Tardiness (min)} & \textbf{Cohen $d$ (wait)} & \textbf{Cohen $d$ (miss)} \\
+\midrule
+FIFO & 167.93 & 24.43 & 26.01 & -- & -- \\
+SPT & 141.45 & 18.96 & 12.02 & -2.552 & -1.351 \\
+EDF & 170.22 & 14.71 & 5.16 & 0.242 & -2.668 \\
+SPT+Rescue & 146.32 & 13.56 & 5.89 & 0.518 & -1.402 \\
+\textbf{RH} (proposed) & 141.70 & 9.60 & 31.84 & -2.571 & -4.467 \\
+\textbf{CADR} (proposed) & 144.66 & 9.68 & 5.95 & -2.430 & -3.936 \\
+Adaptive (EDF-SPT hybrid) & 169.67 & 12.62 & 4.91 & 0.173 & -3.109 \\
+\midrule
+CADR-order-only & 145.96 & 10.16 & 6.59 & -- & -- \\
+\bottomrule
+\end{tabular}

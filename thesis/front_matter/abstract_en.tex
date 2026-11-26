@@ -1,0 +1,17 @@
+\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+
+\begin{center}
+{\fontsize{20}{24}\selectfont\textbf{Abstract}}
+\end{center}
+
+\vspace{20pt}
+
+This thesis formulates the Cloud GPU Rendering Scheduling Problem (CGRSP): assigning batch 3D rendering jobs, one frame per job, to heterogeneous on-demand GPUs under uncertain node availability and mixed deadlines. It evaluates waiting time and missed soft deadlines before rental cost. GPU speeds are calibrated from RunPod execution records, while per-type availability is an assumed stock-status model, so the scheduling results are simulation-based.
+
+A Python discrete-event simulator uses 6,234 recorded RunPod Serverless jobs to compare ten policies across four experimental phases. The policies include eight benchmarks and two proposed schedulers: anticipative Rolling-Horizon (RH) and Cost-Aware Deadline-Risk (CADR). Jobs have tight one-hour or loose eight-hour deadlines. Under an assumed hectic load of about 950 jobs per day, compared with 415 on the busiest recorded day, and a five-slot limit, RH has the lowest miss point estimate (\RHMiss\%, with no significant paired difference from CADR in this sample) and a wait with no significant paired difference from SPT's. Its reservation of idle capacity cuts surge-day miss from \ResSurgeOffMiss\% to \ResSurgeOnMiss\% below saturation; the reservation is disabled at saturation. CADR's miss rate is \CADRmiss\% while its mean tardiness is \CADRtard~min, compared with RH's \RHtard~min. SPT has a low wait but a significantly higher miss rate than EDF (\SPTmiss\% versus \EDFmiss\%).
+
+CADR is the default choice because its baseline miss comparison with RH is inconclusive and its tardiness is substantially lower. RH suits a scarce-availability setting that prioritises the count of missed deadlines; SPT suits a wait-first setting. At saturation, raising the concurrency limit reduces residual misses. These conclusions depend on the assumed load and GPU availability model.
+
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} Cloud GPU scheduling, heterogeneous GPU fleet, discrete-event simulation, deadline-aware scheduling, RunPod Secure Cloud, 3D rendering workloads

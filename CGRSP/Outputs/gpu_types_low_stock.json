@@ -1,0 +1,38 @@
+{
+  "data": {
+    "gpuTypes": [
+      {
+        "lowestPrice": {
+          "minimumBidPrice": 0.16,
+          "uninterruptablePrice": 0.24,
+          "minVcpu": 5,
+          "minMemory": 31,
+          "stockStatus": "Low",
+          "compliance": null,
+          "maxUnreservedGpuCount": 7,
+          "availableGpuCounts": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "__typename": "LowestPrice"
+        },
+        "id": "NVIDIA RTX A4000",
+        "displayName": "RTX A4000",
+        "memoryInGb": 16,
+        "securePrice": 0.24,
+        "communityPrice": 0.17,
+        "oneMonthPrice": null,
+        "oneWeekPrice": null,
+        "threeMonthPrice": 0.204,
+        "sixMonthPrice": 0.192,
+        "secureSpotPrice": 0.16,
+        "__typename": "GpuType"
+      }
+    ]
+  }
+}

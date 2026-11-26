@@ -1,0 +1,70 @@
+/.claude
+/__pycache__
+node_modules/
+outputs/.DS_Store
+.DS_Store
+/.omc
+*.pyc
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# CGRSP outputs
+CGRSP/cgrsp/__pycache__/
+CGRSP/cgrsp/data/__pycache__/
+CGRSP/cgrsp/simulator/__pycache__/
+
+# Data collection monitoring data
+data_collection/
+*.log
+
+# Development notes
+code_questions.md
+questions.md
+terminology_explanation.txt
+
+# Raw data, API credentials, and collection scripts (never commit API keys)
+data/.env
+data/archive/
+data/rendering_jobs/
+data/runpod_pricing/
+data/scripts/
+
+# Compiled PDFs (generated artifacts)
+paper/thesis_main.pdf
+paper/cgrsp_formulation.pdf
+
+# Agent configuration
+.antigravitycli/
+
+
+
+# paper/ holds auto-exported figure copies (duplicates of thesis/figures/)
+paper/
+
+# Phase A manuscript tree: tracked inside the otherwise ignored paper/ export
+# directory. Re-include the paper directory itself, keep ignoring its direct
+# children (the exported figure and PDF copies), then re-include the
+# manuscript sources. paper/*.pdf stays ignored.
+!paper/
+paper/*
+!paper/manuscript/
+!paper/manuscript/**
+
+# stray aborted-run TeX logs
+texput.log
+
+# AI planning notes (never commit)
+.superpowers/
+docs/superpowers/
+
+public/thesis.pdf
+data/raw_rendering_responses.jsonl
+.wrangler/
+SPARS-Pub/.pytest_cache/
+outputs/
+
+.pytest_cache/
+SPARS-Pub/

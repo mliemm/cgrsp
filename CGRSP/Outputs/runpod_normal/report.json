@@ -1,0 +1,1609 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-02T05:02:49.298844+00:00",
+    "scenario": "100 rendering jobs on RunPod Secure Cloud",
+    "num_jobs": 100,
+    "max_concurrency": 5,
+    "arrival_rate_jobs_per_sec": 0.002,
+    "simulation_duration_sec": 86400,
+    "simulation_duration_hr": 24,
+    "seed": 42,
+    "availability_model": "Qualitative Stock Status (High/Medium/Low)",
+    "pricing_source": "RunPod Secure Cloud (March 2026)",
+    "schedulers_compared": [
+      "FIFO",
+      "SPT",
+      "EDF",
+      "LCF",
+      "Balanced",
+      "Random",
+      "SPT+Rescue"
+    ]
+  },
+  "results": {
+    "FIFO": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 3,
+        "deadline_met": 97,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 3.0,
+        "deadline_met_rate_pct": 97.0
+      },
+      "avg_tardiness_s": 67.41907502068949,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 668.2939,
+          "min": 11.1382,
+          "hr": 0.185637
+        },
+        "median": {
+          "sec": 60.385,
+          "min": 1.0064,
+          "hr": 0.016774
+        },
+        "std_dev_sec": 1684.3508,
+        "min": {
+          "sec": 0.0683,
+          "min": 0.0011,
+          "hr": 1.9e-05
+        },
+        "max": {
+          "sec": 7113.072,
+          "min": 118.5512,
+          "hr": 1.975853
+        },
+        "p95": {
+          "sec": 5557.754,
+          "min": 92.6292
+        },
+        "p99": {
+          "sec": 7112.6038,
+          "min": 118.5434
+        },
+        "total": {
+          "sec": 66829.39,
+          "min": 1113.8232,
+          "hr": 18.563719
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 740.586,
+          "min": 12.3431,
+          "hr": 0.205718
+        },
+        "median": {
+          "sec": 129.1889,
+          "min": 2.1531,
+          "hr": 0.035886
+        },
+        "std_dev_sec": 1684.2236,
+        "min": {
+          "sec": 58.9098,
+          "min": 0.9818,
+          "hr": 0.016364
+        },
+        "max": {
+          "sec": 7185.2378,
+          "min": 119.754,
+          "hr": 1.995899
+        },
+        "p95": {
+          "sec": 5626.8687,
+          "min": 93.7811
+        },
+        "p99": {
+          "sec": 7184.6509,
+          "min": 119.7442
+        },
+        "total": {
+          "sec": 74058.5957,
+          "min": 1234.3099,
+          "hr": 20.571832
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.2921,
+          "min": 1.2049,
+          "hr": 0.020081
+        },
+        "median": {
+          "sec": 67.5922,
+          "min": 1.1265,
+          "hr": 0.018776
+        },
+        "std_dev_sec": 16.8345,
+        "min": {
+          "sec": 54.2976,
+          "min": 0.905,
+          "hr": 0.015083
+        },
+        "max": {
+          "sec": 144.209,
+          "min": 2.4035,
+          "hr": 0.040058
+        },
+        "p95": {
+          "sec": 110.8243,
+          "min": 1.8471
+        },
+        "p99": {
+          "sec": 144.0823,
+          "min": 2.4014
+        },
+        "total": {
+          "sec": 7229.2057,
+          "min": 120.4868,
+          "hr": 2.008113
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 67.4191,
+          "min": 1.1237,
+          "hr": 0.018728
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 392.3296,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2832.2517,
+          "min": 47.2042
+        },
+        "total": {
+          "sec": 6741.9075,
+          "min": 112.3651,
+          "hr": 1.872752
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.733538,
+        "avg_per_job_usd": 0.007335,
+        "median_per_job_usd": 0.007536,
+        "std_dev_per_job_usd": 0.002584,
+        "min_per_job_usd": 0.003771,
+        "max_per_job_usd": 0.016808
+      },
+      "utilization": {
+        "avg_pct": 33.2136,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 30.4935
+      },
+      "objective": {
+        "total": 33430.0618,
+        "avg_per_job": 334.300618,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_3090": 53,
+        "RTX_A5000": 25,
+        "RTX_A4500": 14,
+        "RTX_A4000": 8
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 668.2939003028007,
+        "median_waiting_time": 60.38495948849959,
+        "avg_response_time": 740.5859569814173,
+        "median_response_time": 129.18889787429362,
+        "avg_execution_time": 72.29205667861662,
+        "avg_tardiness": 67.41907502068949
+      },
+      "cost_metrics": {
+        "total_cost": 0.7335379203353201,
+        "avg_cost_per_job": 0.007335379203353201
+      },
+      "utilization_legacy": {
+        "average": 0.3321357285429142
+      }
+    },
+    "SPT": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 2,
+        "deadline_met": 98,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 2.0,
+        "deadline_met_rate_pct": 98.0
+      },
+      "avg_tardiness_s": 48.955475414518006,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 477.4699,
+          "min": 7.9578,
+          "hr": 0.132631
+        },
+        "median": {
+          "sec": 8.9578,
+          "min": 0.1493,
+          "hr": 0.002488
+        },
+        "std_dev_sec": 1469.9012,
+        "min": {
+          "sec": 0.063,
+          "min": 0.001,
+          "hr": 1.7e-05
+        },
+        "max": {
+          "sec": 6731.6538,
+          "min": 112.1942,
+          "hr": 1.869904
+        },
+        "p95": {
+          "sec": 5541.8678,
+          "min": 92.3645
+        },
+        "p99": {
+          "sec": 6727.5628,
+          "min": 112.126
+        },
+        "total": {
+          "sec": 47746.9925,
+          "min": 795.7832,
+          "hr": 13.263053
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 550.4376,
+          "min": 9.174,
+          "hr": 0.152899
+        },
+        "median": {
+          "sec": 104.0584,
+          "min": 1.7343,
+          "hr": 0.028905
+        },
+        "std_dev_sec": 1473.2544,
+        "min": {
+          "sec": 56.9705,
+          "min": 0.9495,
+          "hr": 0.015825
+        },
+        "max": {
+          "sec": 6858.301,
+          "min": 114.305,
+          "hr": 1.905084
+        },
+        "p95": {
+          "sec": 5611.5788,
+          "min": 93.5263
+        },
+        "p99": {
+          "sec": 6854.121,
+          "min": 114.2354
+        },
+        "total": {
+          "sec": 55043.7608,
+          "min": 917.396,
+          "hr": 15.289934
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.9677,
+          "min": 1.2161,
+          "hr": 0.020269
+        },
+        "median": {
+          "sec": 69.295,
+          "min": 1.1549,
+          "hr": 0.019249
+        },
+        "std_dev_sec": 15.9185,
+        "min": {
+          "sec": 53.4894,
+          "min": 0.8915,
+          "hr": 0.014858
+        },
+        "max": {
+          "sec": 128.907,
+          "min": 2.1485,
+          "hr": 0.035808
+        },
+        "p95": {
+          "sec": 111.8998,
+          "min": 1.865
+        },
+        "p99": {
+          "sec": 128.8844,
+          "min": 2.1481
+        },
+        "total": {
+          "sec": 7296.7683,
+          "min": 121.6128,
+          "hr": 2.02688
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 48.9555,
+          "min": 0.8159,
+          "hr": 0.013599
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 348.9043,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2832.451,
+          "min": 47.2075
+        },
+        "total": {
+          "sec": 4895.5475,
+          "min": 81.5925,
+          "hr": 1.359874
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.561499,
+        "avg_per_job_usd": 0.005615,
+        "median_per_job_usd": 0.004952,
+        "std_dev_per_job_usd": 0.001898,
+        "min_per_job_usd": 0.003715,
+        "max_per_job_usd": 0.016183
+      },
+      "utilization": {
+        "avg_pct": 27.8244,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 25.4452
+      },
+      "objective": {
+        "total": 23883.777,
+        "avg_per_job": 238.83777,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_A4500": 44,
+        "RTX_A5000": 27,
+        "RTX_A4000": 19,
+        "RTX_3090": 10
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 477.46992471303093,
+        "median_waiting_time": 8.957826124405074,
+        "avg_response_time": 550.4376079866355,
+        "median_response_time": 104.05837785052336,
+        "avg_execution_time": 72.96768327360464,
+        "avg_tardiness": 48.955475414518006
+      },
+      "cost_metrics": {
+        "total_cost": 0.5614992197972413,
+        "avg_cost_per_job": 0.005614992197972413
+      },
+      "utilization_legacy": {
+        "average": 0.2782435129740519
+      }
+    },
+    "EDF": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 3,
+        "deadline_met": 97,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 3.0,
+        "deadline_met_rate_pct": 97.0
+      },
+      "avg_tardiness_s": 67.61833121087504,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 604.6648,
+          "min": 10.0777,
+          "hr": 0.167962
+        },
+        "median": {
+          "sec": 33.2955,
+          "min": 0.5549,
+          "hr": 0.009249
+        },
+        "std_dev_sec": 1513.1039,
+        "min": {
+          "sec": 0.0683,
+          "min": 0.0011,
+          "hr": 1.9e-05
+        },
+        "max": {
+          "sec": 7066.2519,
+          "min": 117.7709,
+          "hr": 1.962848
+        },
+        "p95": {
+          "sec": 5153.8256,
+          "min": 85.8971
+        },
+        "p99": {
+          "sec": 7058.815,
+          "min": 117.6469
+        },
+        "total": {
+          "sec": 60466.4756,
+          "min": 1007.7746,
+          "hr": 16.796243
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 676.8941,
+          "min": 11.2816,
+          "hr": 0.188026
+        },
+        "median": {
+          "sec": 109.9611,
+          "min": 1.8327,
+          "hr": 0.030545
+        },
+        "std_dev_sec": 1515.2873,
+        "min": {
+          "sec": 58.9227,
+          "min": 0.982,
+          "hr": 0.016367
+        },
+        "max": {
+          "sec": 7126.5411,
+          "min": 118.7757,
+          "hr": 1.979595
+        },
+        "p95": {
+          "sec": 5219.927,
+          "min": 86.9988
+        },
+        "p99": {
+          "sec": 7119.6788,
+          "min": 118.6613
+        },
+        "total": {
+          "sec": 67689.4106,
+          "min": 1128.1568,
+          "hr": 18.802614
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.2293,
+          "min": 1.2038,
+          "hr": 0.020064
+        },
+        "median": {
+          "sec": 68.099,
+          "min": 1.135,
+          "hr": 0.018916
+        },
+        "std_dev_sec": 16.1105,
+        "min": {
+          "sec": 54.7462,
+          "min": 0.9124,
+          "hr": 0.015207
+        },
+        "max": {
+          "sec": 133.2621,
+          "min": 2.221,
+          "hr": 0.037017
+        },
+        "p95": {
+          "sec": 111.8998,
+          "min": 1.865
+        },
+        "p99": {
+          "sec": 133.2185,
+          "min": 2.2203
+        },
+        "total": {
+          "sec": 7222.935,
+          "min": 120.3822,
+          "hr": 2.006371
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 67.6183,
+          "min": 1.127,
+          "hr": 0.018783
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 393.3429,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2832.451,
+          "min": 47.2075
+        },
+        "total": {
+          "sec": 6761.8331,
+          "min": 112.6972,
+          "hr": 1.878287
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.642197,
+        "avg_per_job_usd": 0.006422,
+        "median_per_job_usd": 0.005415,
+        "std_dev_per_job_usd": 0.002007,
+        "min_per_job_usd": 0.003902,
+        "max_per_job_usd": 0.012226
+      },
+      "utilization": {
+        "avg_pct": 30.7385,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 27.1966
+      },
+      "objective": {
+        "total": 30248.5589,
+        "avg_per_job": 302.485589,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_A4500": 29,
+        "RTX_A5000": 28,
+        "RTX_3090": 33,
+        "RTX_A4000": 10
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 604.6647563196783,
+        "median_waiting_time": 33.29550801604637,
+        "avg_response_time": 676.8941058287552,
+        "median_response_time": 109.9611408527253,
+        "avg_execution_time": 72.22934950907693,
+        "avg_tardiness": 67.61833121087504
+      },
+      "cost_metrics": {
+        "total_cost": 0.6421966005520435,
+        "avg_cost_per_job": 0.006421966005520435
+      },
+      "utilization_legacy": {
+        "average": 0.3073852295409182
+      }
+    },
+    "LCF": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 2,
+        "deadline_met": 98,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 2.0,
+        "deadline_met_rate_pct": 98.0
+      },
+      "avg_tardiness_s": 48.955475414518006,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 386.6628,
+          "min": 6.4444,
+          "hr": 0.107406
+        },
+        "median": {
+          "sec": 9.1428,
+          "min": 0.1524,
+          "hr": 0.00254
+        },
+        "std_dev_sec": 1328.0717,
+        "min": {
+          "sec": 0.1775,
+          "min": 0.003,
+          "hr": 4.9e-05
+        },
+        "max": {
+          "sec": 6813.4918,
+          "min": 113.5582,
+          "hr": 1.892637
+        },
+        "p95": {
+          "sec": 4158.9451,
+          "min": 69.3158
+        },
+        "p99": {
+          "sec": 6808.5824,
+          "min": 113.4764
+        },
+        "total": {
+          "sec": 38666.2782,
+          "min": 644.438,
+          "hr": 10.740633
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 459.8749,
+          "min": 7.6646,
+          "hr": 0.127743
+        },
+        "median": {
+          "sec": 96.1664,
+          "min": 1.6028,
+          "hr": 0.026713
+        },
+        "std_dev_sec": 1328.2359,
+        "min": {
+          "sec": 56.9705,
+          "min": 0.9495,
+          "hr": 0.015825
+        },
+        "max": {
+          "sec": 6873.2811,
+          "min": 114.5547,
+          "hr": 1.909245
+        },
+        "p95": {
+          "sec": 4220.3611,
+          "min": 70.3394
+        },
+        "p99": {
+          "sec": 6868.9513,
+          "min": 114.4825
+        },
+        "total": {
+          "sec": 45987.4884,
+          "min": 766.4581,
+          "hr": 12.774302
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 73.2121,
+          "min": 1.2202,
+          "hr": 0.020337
+        },
+        "median": {
+          "sec": 69.0644,
+          "min": 1.1511,
+          "hr": 0.019185
+        },
+        "std_dev_sec": 16.2307,
+        "min": {
+          "sec": 53.4894,
+          "min": 0.8915,
+          "hr": 0.014858
+        },
+        "max": {
+          "sec": 144.209,
+          "min": 2.4035,
+          "hr": 0.040058
+        },
+        "p95": {
+          "sec": 110.4859,
+          "min": 1.8414
+        },
+        "p99": {
+          "sec": 144.0559,
+          "min": 2.4009
+        },
+        "total": {
+          "sec": 7321.2102,
+          "min": 122.0202,
+          "hr": 2.03367
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 48.9555,
+          "min": 0.8159,
+          "hr": 0.013599
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 348.9043,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2832.451,
+          "min": 47.2075
+        },
+        "total": {
+          "sec": 4895.5475,
+          "min": 81.5925,
+          "hr": 1.359874
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.539219,
+        "avg_per_job_usd": 0.005392,
+        "median_per_job_usd": 0.004947,
+        "std_dev_per_job_usd": 0.001424,
+        "min_per_job_usd": 0.003715,
+        "max_per_job_usd": 0.010931
+      },
+      "utilization": {
+        "avg_pct": 25.6287,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 24.937
+      },
+      "objective": {
+        "total": 19343.4087,
+        "avg_per_job": 193.434087,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_A4500": 54,
+        "RTX_A4000": 29,
+        "RTX_A5000": 10,
+        "RTX_3090": 7
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 386.6627816002068,
+        "median_waiting_time": 9.14284169470011,
+        "avg_response_time": 459.87488403853206,
+        "median_response_time": 96.16643845385806,
+        "avg_execution_time": 73.21210243832527,
+        "avg_tardiness": 48.955475414518006
+      },
+      "cost_metrics": {
+        "total_cost": 0.5392188837970057,
+        "avg_cost_per_job": 0.005392188837970057
+      },
+      "utilization_legacy": {
+        "average": 0.2562874251497006
+      }
+    },
+    "Balanced": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 3,
+        "deadline_met": 97,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 3.0,
+        "deadline_met_rate_pct": 97.0
+      },
+      "avg_tardiness_s": 76.40140222374659,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 538.8178,
+          "min": 8.9803,
+          "hr": 0.149672
+        },
+        "median": {
+          "sec": 9.6193,
+          "min": 0.1603,
+          "hr": 0.002672
+        },
+        "std_dev_sec": 1429.358,
+        "min": {
+          "sec": 0.0683,
+          "min": 0.0011,
+          "hr": 1.9e-05
+        },
+        "max": {
+          "sec": 6322.5563,
+          "min": 105.3759,
+          "hr": 1.756266
+        },
+        "p95": {
+          "sec": 5021.8617,
+          "min": 83.6977
+        },
+        "p99": {
+          "sec": 6322.0811,
+          "min": 105.368
+        },
+        "total": {
+          "sec": 53881.78,
+          "min": 898.0297,
+          "hr": 14.967161
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 611.495,
+          "min": 10.1916,
+          "hr": 0.16986
+        },
+        "median": {
+          "sec": 104.0584,
+          "min": 1.7343,
+          "hr": 0.028905
+        },
+        "std_dev_sec": 1432.1631,
+        "min": {
+          "sec": 56.3268,
+          "min": 0.9388,
+          "hr": 0.015646
+        },
+        "max": {
+          "sec": 6440.3015,
+          "min": 107.3384,
+          "hr": 1.788973
+        },
+        "p95": {
+          "sec": 5106.1827,
+          "min": 85.103
+        },
+        "p99": {
+          "sec": 6439.3444,
+          "min": 107.3224
+        },
+        "total": {
+          "sec": 61149.5007,
+          "min": 1019.1583,
+          "hr": 16.985972
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.6772,
+          "min": 1.2113,
+          "hr": 0.020188
+        },
+        "median": {
+          "sec": 68.4759,
+          "min": 1.1413,
+          "hr": 0.019021
+        },
+        "std_dev_sec": 16.1073,
+        "min": {
+          "sec": 54.5875,
+          "min": 0.9098,
+          "hr": 0.015163
+        },
+        "max": {
+          "sec": 133.2621,
+          "min": 2.221,
+          "hr": 0.037017
+        },
+        "p95": {
+          "sec": 111.8998,
+          "min": 1.865
+        },
+        "p99": {
+          "sec": 133.2185,
+          "min": 2.2203
+        },
+        "total": {
+          "sec": 7267.7207,
+          "min": 121.1287,
+          "hr": 2.018811
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 76.4014,
+          "min": 1.2734,
+          "hr": 0.021223
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 440.8488,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2839.3444,
+          "min": 47.3224
+        },
+        "total": {
+          "sec": 7640.1402,
+          "min": 127.3357,
+          "hr": 2.122261
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.553292,
+        "avg_per_job_usd": 0.005533,
+        "median_per_job_usd": 0.005009,
+        "std_dev_per_job_usd": 0.001573,
+        "min_per_job_usd": 0.003791,
+        "max_per_job_usd": 0.012226
+      },
+      "utilization": {
+        "avg_pct": 28.1437,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 26.6673
+      },
+      "objective": {
+        "total": 26956.1667,
+        "avg_per_job": 269.561667,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_A4500": 34,
+        "RTX_A5000": 41,
+        "RTX_A4000": 17,
+        "RTX_3090": 8
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 538.817800311606,
+        "median_waiting_time": 9.619281759905789,
+        "avg_response_time": 611.4950074344578,
+        "median_response_time": 104.05837785052336,
+        "avg_execution_time": 72.67720712285187,
+        "avg_tardiness": 76.40140222374659
+      },
+      "cost_metrics": {
+        "total_cost": 0.5532915589904915,
+        "avg_cost_per_job": 0.005532915589904915
+      },
+      "utilization_legacy": {
+        "average": 0.281437125748503
+      }
+    },
+    "Random": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 3,
+        "deadline_met": 97,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 3.0,
+        "deadline_met_rate_pct": 97.0
+      },
+      "avg_tardiness_s": 64.37867310863923,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 363.8935,
+          "min": 6.0649,
+          "hr": 0.101082
+        },
+        "median": {
+          "sec": 33.6003,
+          "min": 0.56,
+          "hr": 0.009333
+        },
+        "std_dev_sec": 1156.0505,
+        "min": {
+          "sec": 0.063,
+          "min": 0.001,
+          "hr": 1.7e-05
+        },
+        "max": {
+          "sec": 7087.2984,
+          "min": 118.1216,
+          "hr": 1.968694
+        },
+        "p95": {
+          "sec": 2991.4961,
+          "min": 49.8583
+        },
+        "p99": {
+          "sec": 7070.3927,
+          "min": 117.8399
+        },
+        "total": {
+          "sec": 36389.3489,
+          "min": 606.4891,
+          "hr": 10.108152
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 436.2875,
+          "min": 7.2715,
+          "hr": 0.121191
+        },
+        "median": {
+          "sec": 107.3151,
+          "min": 1.7886,
+          "hr": 0.02981
+        },
+        "std_dev_sec": 1156.8153,
+        "min": {
+          "sec": 56.3268,
+          "min": 0.9388,
+          "hr": 0.015646
+        },
+        "max": {
+          "sec": 7198.3918,
+          "min": 119.9732,
+          "hr": 1.999553
+        },
+        "p95": {
+          "sec": 3045.4091,
+          "min": 50.7568
+        },
+        "p99": {
+          "sec": 7181.0708,
+          "min": 119.6845
+        },
+        "total": {
+          "sec": 43628.7548,
+          "min": 727.1459,
+          "hr": 12.119099
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.3941,
+          "min": 1.2066,
+          "hr": 0.020109
+        },
+        "median": {
+          "sec": 68.7425,
+          "min": 1.1457,
+          "hr": 0.019095
+        },
+        "std_dev_sec": 16.5731,
+        "min": {
+          "sec": 53.4664,
+          "min": 0.8911,
+          "hr": 0.014852
+        },
+        "max": {
+          "sec": 144.209,
+          "min": 2.4035,
+          "hr": 0.040058
+        },
+        "p95": {
+          "sec": 110.6457,
+          "min": 1.8441
+        },
+        "p99": {
+          "sec": 144.0823,
+          "min": 2.4014
+        },
+        "total": {
+          "sec": 7239.4059,
+          "min": 120.6568,
+          "hr": 2.010946
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 64.3787,
+          "min": 1.073,
+          "hr": 0.017883
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 413.9497,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 3598.3918,
+          "min": 59.9732,
+          "hr": 0.999553
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 3581.0708,
+          "min": 59.6845
+        },
+        "total": {
+          "sec": 6437.8673,
+          "min": 107.2978,
+          "hr": 1.788296
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.658148,
+        "avg_per_job_usd": 0.006581,
+        "median_per_job_usd": 0.005097,
+        "std_dev_per_job_usd": 0.002746,
+        "min_per_job_usd": 0.003713,
+        "max_per_job_usd": 0.016808
+      },
+      "utilization": {
+        "avg_pct": 25.9481,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 23.7771
+      },
+      "objective": {
+        "total": 18210.0035,
+        "avg_per_job": 182.100035,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_3090": 33,
+        "RTX_A5000": 19,
+        "RTX_A4500": 25,
+        "RTX_A4000": 23
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 363.89348876007114,
+        "median_waiting_time": 33.60025694500473,
+        "avg_response_time": 436.2875475747444,
+        "median_response_time": 107.31505421303336,
+        "avg_execution_time": 72.39405881467323,
+        "avg_tardiness": 64.37867310863923
+      },
+      "cost_metrics": {
+        "total_cost": 0.6581482116740013,
+        "avg_cost_per_job": 0.006581482116740013
+      },
+      "utilization_legacy": {
+        "average": 0.2594810379241517
+      }
+    },
+    "SPT+Rescue": {
+      "job_counts": {
+        "submitted": 100,
+        "completed": 100,
+        "pending": 0,
+        "deadline_missed": 2,
+        "deadline_met": 98,
+        "completion_rate_pct": 100.0,
+        "deadline_miss_rate_pct": 2.0,
+        "deadline_met_rate_pct": 98.0
+      },
+      "avg_tardiness_s": 48.955475414518006,
+      "p95_tardiness_s": 0.0,
+      "waiting_time": {
+        "avg": {
+          "sec": 477.4699,
+          "min": 7.9578,
+          "hr": 0.132631
+        },
+        "median": {
+          "sec": 8.9578,
+          "min": 0.1493,
+          "hr": 0.002488
+        },
+        "std_dev_sec": 1469.9012,
+        "min": {
+          "sec": 0.063,
+          "min": 0.001,
+          "hr": 1.7e-05
+        },
+        "max": {
+          "sec": 6731.6538,
+          "min": 112.1942,
+          "hr": 1.869904
+        },
+        "p95": {
+          "sec": 5541.8678,
+          "min": 92.3645
+        },
+        "p99": {
+          "sec": 6727.5628,
+          "min": 112.126
+        },
+        "total": {
+          "sec": 47746.9925,
+          "min": 795.7832,
+          "hr": 13.263053
+        },
+        "count": 100
+      },
+      "response_time": {
+        "avg": {
+          "sec": 550.4376,
+          "min": 9.174,
+          "hr": 0.152899
+        },
+        "median": {
+          "sec": 104.0584,
+          "min": 1.7343,
+          "hr": 0.028905
+        },
+        "std_dev_sec": 1473.2544,
+        "min": {
+          "sec": 56.9705,
+          "min": 0.9495,
+          "hr": 0.015825
+        },
+        "max": {
+          "sec": 6858.301,
+          "min": 114.305,
+          "hr": 1.905084
+        },
+        "p95": {
+          "sec": 5611.5788,
+          "min": 93.5263
+        },
+        "p99": {
+          "sec": 6854.121,
+          "min": 114.2354
+        },
+        "total": {
+          "sec": 55043.7608,
+          "min": 917.396,
+          "hr": 15.289934
+        },
+        "count": 100
+      },
+      "execution_time": {
+        "avg": {
+          "sec": 72.9677,
+          "min": 1.2161,
+          "hr": 0.020269
+        },
+        "median": {
+          "sec": 69.295,
+          "min": 1.1549,
+          "hr": 0.019249
+        },
+        "std_dev_sec": 15.9185,
+        "min": {
+          "sec": 53.4894,
+          "min": 0.8915,
+          "hr": 0.014858
+        },
+        "max": {
+          "sec": 128.907,
+          "min": 2.1485,
+          "hr": 0.035808
+        },
+        "p95": {
+          "sec": 111.8998,
+          "min": 1.865
+        },
+        "p99": {
+          "sec": 128.8844,
+          "min": 2.1481
+        },
+        "total": {
+          "sec": 7296.7683,
+          "min": 121.6128,
+          "hr": 2.02688
+        },
+        "count": 100
+      },
+      "tardiness": {
+        "avg": {
+          "sec": 48.9555,
+          "min": 0.8159,
+          "hr": 0.013599
+        },
+        "median": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "std_dev_sec": 348.9043,
+        "min": {
+          "sec": 0.0,
+          "min": 0.0,
+          "hr": 0.0
+        },
+        "max": {
+          "sec": 2840.3015,
+          "min": 47.3384,
+          "hr": 0.788973
+        },
+        "p95": {
+          "sec": 0.0,
+          "min": 0.0
+        },
+        "p99": {
+          "sec": 2832.451,
+          "min": 47.2075
+        },
+        "total": {
+          "sec": 4895.5475,
+          "min": 81.5925,
+          "hr": 1.359874
+        },
+        "count": 100
+      },
+      "cost": {
+        "total_usd": 0.561499,
+        "avg_per_job_usd": 0.005615,
+        "median_per_job_usd": 0.004952,
+        "std_dev_per_job_usd": 0.001898,
+        "min_per_job_usd": 0.003715,
+        "max_per_job_usd": 0.016183
+      },
+      "utilization": {
+        "avg_pct": 27.8244,
+        "median_pct": 20.0,
+        "min_pct": 0.0,
+        "max_pct": 100.0,
+        "std_dev_pct": 25.4452
+      },
+      "objective": {
+        "total": 23883.777,
+        "avg_per_job": 238.83777,
+        "description": "0.5*(1.0*wait_s + 10.0*miss_indicator) + 0.5*cost_usd"
+      },
+      "gpu_breakdown": {
+        "RTX_A4500": 44,
+        "RTX_A5000": 27,
+        "RTX_A4000": 19,
+        "RTX_3090": 10
+      },
+      "timing_metrics": {
+        "avg_waiting_time": 477.46992471303093,
+        "median_waiting_time": 8.957826124405074,
+        "avg_response_time": 550.4376079866355,
+        "median_response_time": 104.05837785052336,
+        "avg_execution_time": 72.96768327360464,
+        "avg_tardiness": 48.955475414518006
+      },
+      "cost_metrics": {
+        "total_cost": 0.5614992197972413,
+        "avg_cost_per_job": 0.005614992197972413
+      },
+      "utilization_legacy": {
+        "average": 0.2782435129740519
+      }
+    }
+  },
+  "verification": {
+    "FIFO": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "SPT": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "EDF": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "LCF": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "Balanced": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "Random": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "SPT+Rescue": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 100,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    }
+  }
+}

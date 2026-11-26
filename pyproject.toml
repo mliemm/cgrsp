@@ -1,0 +1,26 @@
+[project]
+name = "cgrsp-thesis"
+version = "1.0.0"
+description = "CGRSP: Accelerating Workload Scheduling in On-Demand Heterogeneous GPU Clouds"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "codespell>=2.2.0",           # Spell checking
+    "checkmytex>=1.0.0",          # Unified grammar + spelling + LaTeX linting
+    "pre-commit>=2.20.0",         # Git pre-commit hook framework
+]
+test = [
+    "pytest>=7.0",
+]
+
+[tool.codespell]
+skip = ".git,.venv,__pycache__,.pytest_cache,*/archive/*,*_original*,plagiarism_check,references,data/rendering_jobs,data/runpod_pricing,SPARS-Pub,models,outputs,*.json,*.pdf,*.csv,*.jsonl,*.bbl,*.aux,*.log,*.toc,*.lof,*.lot,*.out,*.blg,*.fls,*.fdb_latexmk,*.synctex.gz,*.png,*.jpg,*.jpeg,*.gif,*.ico"
+ignore-words-list = "ttests,ttest,theses,fulfilment"
+
+[tool.pytest.ini_options]
+pythonpath = ["CGRSP"]
+testpaths = ["CGRSP/tests"]

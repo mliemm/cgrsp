@@ -1,0 +1,20 @@
+# Thesis proofreading and linting tools
+
+# Grammar, spelling, and LaTeX checking (unified)
+checkmytex>=1.0.0          # Combines LanguageTool, aspell, ChkTeX, proselint
+
+# Individual tools (if using separately)
+# Note: CheckMyTex bundles these internally, but they're listed for reference/direct usage
+LanguageTool-python3       # Grammar checking backend (via CheckMyTex)
+# aspell                   # Spell checking (requires system install: brew install aspell)
+# ChkTeX                   # LaTeX structural linting (via conda: conda install chktex)
+
+# Pre-commit framework and hooks
+pre-commit>=2.20.0         # Git pre-commit hook framework
+# jonasbb/pre-commit-latex-hooks is pulled via .pre-commit-config.yaml (no pip needed)
+
+# Spell checking (already in use)
+codespell>=2.2.0           # Configured in .codespellrc
+
+# Build and CI dependencies
+invoke>=1.7.0              # Task runner (optional, for task automation)

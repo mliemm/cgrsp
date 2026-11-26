@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "rho_res_values": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "n_seeds": 30,
+    "concurrency": 5,
+    "days": {
+      "surge": {
+        "n_jobs": 730,
+        "arrival_rate": 0.02
+      },
+      "hectic": {
+        "n_jobs": 950,
+        "arrival_rate": 0.1
+      }
+    },
+    "elapsed_sec": 375.4
+  },
+  "results": {
+    "surge": {
+      "r0": {
+        "rho_res": 0,
+        "n_seeds": 30,
+        "avg_wait_min": 96.8693,
+        "avg_miss_pct": 6.4201,
+        "tight_miss_pct": 31.9935,
+        "loose_miss_pct": 0.0,
+        "avg_tardiness_min": 14.4994
+      },
+      "r1": {
+        "rho_res": 1,
+        "n_seeds": 30,
+        "avg_wait_min": 108.7596,
+        "avg_miss_pct": 1.3288,
+        "tight_miss_pct": 6.6176,
+        "loose_miss_pct": 0.0113,
+        "avg_tardiness_min": 0.7304
+      },
+      "r2": {
+        "rho_res": 2,
+        "n_seeds": 30,
+        "avg_wait_min": 130.6815,
+        "avg_miss_pct": 2.1963,
+        "tight_miss_pct": 6.4136,
+        "loose_miss_pct": 1.1568,
+        "avg_tardiness_min": 1.1681
+      },
+      "r3": {
+        "rho_res": 3,
+        "n_seeds": 30,
+        "avg_wait_min": 167.8128,
+        "avg_miss_pct": 5.6484,
+        "tight_miss_pct": 6.0752,
+        "loose_miss_pct": 5.5404,
+        "avg_tardiness_min": 5.7544
+      }
+    },
+    "hectic": {
+      "r0": {
+        "rho_res": 0,
+        "n_seeds": 30,
+        "avg_wait_min": 141.6991,
+        "avg_miss_pct": 9.5965,
+        "tight_miss_pct": 31.4406,
+        "loose_miss_pct": 4.2056,
+        "avg_tardiness_min": 31.8397
+      },
+      "r1": {
+        "rho_res": 1,
+        "n_seeds": 30,
+        "avg_wait_min": 141.6991,
+        "avg_miss_pct": 9.5965,
+        "tight_miss_pct": 31.4406,
+        "loose_miss_pct": 4.2056,
+        "avg_tardiness_min": 31.8397
+      },
+      "r2": {
+        "rho_res": 2,
+        "n_seeds": 30,
+        "avg_wait_min": 141.6991,
+        "avg_miss_pct": 9.5965,
+        "tight_miss_pct": 31.4406,
+        "loose_miss_pct": 4.2056,
+        "avg_tardiness_min": 31.8397
+      },
+      "r3": {
+        "rho_res": 3,
+        "n_seeds": 30,
+        "avg_wait_min": 141.6991,
+        "avg_miss_pct": 9.5965,
+        "tight_miss_pct": 31.4406,
+        "loose_miss_pct": 4.2056,
+        "avg_tardiness_min": 31.8397
+      }
+    }
+  }
+}

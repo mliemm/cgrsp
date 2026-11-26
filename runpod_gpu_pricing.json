@@ -1,0 +1,107 @@
+{
+  "provider": "RunPod",
+  "pricing_type": "Flex (Serverless)",
+  "updated": "2025-01-14",
+  "currency": "USD",
+  "gpus": [
+    {
+      "model": "B200",
+      "memory_gb": 180,
+      "price_per_second": 0.00240,
+      "price_per_hour": 8.64,
+      "description": "Maximum throughput for big models"
+    },
+    {
+      "model": "H200",
+      "memory_gb": 141,
+      "price_per_second": 0.00155,
+      "price_per_hour": 5.58,
+      "description": "Extreme throughput for big models"
+    },
+    {
+      "model": "H100",
+      "memory_gb": 80,
+      "price_per_second": 0.00116,
+      "price_per_hour": 4.18,
+      "description": "Extreme throughput for big models",
+      "tier": "PRO"
+    },
+    {
+      "model": "A100",
+      "memory_gb": 80,
+      "price_per_second": 0.00076,
+      "price_per_hour": 2.72,
+      "description": "High throughput GPU, yet still very cost-effective"
+    },
+    {
+      "model": ["L40", "L40S", "6000 Ada"],
+      "memory_gb": 48,
+      "price_per_second": 0.00053,
+      "price_per_hour": 1.90,
+      "description": "Extreme inference throughput on LLMs like Llama 3 7B",
+      "tier": "PRO"
+    },
+    {
+      "model": ["A6000", "A40"],
+      "memory_gb": 48,
+      "price_per_second": 0.00034,
+      "price_per_hour": 1.22,
+      "description": "A cost-effective option for running big models"
+    },
+    {
+      "model": "5090",
+      "memory_gb": 32,
+      "price_per_second": 0.00044,
+      "price_per_hour": 1.58,
+      "description": "Extreme throughput for small-to-medium models",
+      "tier": "PRO"
+    },
+    {
+      "model": "4090",
+      "memory_gb": 24,
+      "price_per_second": 0.00031,
+      "price_per_hour": 1.10,
+      "description": "Extreme throughput for small-to-medium models",
+      "tier": "PRO"
+    },
+    {
+      "model": ["L4", "A5000", "3090"],
+      "memory_gb": 24,
+      "price_per_second": 0.00019,
+      "price_per_hour": 0.69,
+      "description": "Great for small-to-medium sized inference workloads"
+    },
+    {
+      "model": ["A4000", "A4500", "RTX 4000", "RTX 2000"],
+      "memory_gb": 16,
+      "price_per_second": 0.00016,
+      "price_per_hour": 0.58,
+      "description": "The most cost-effective for small models"
+    }
+  ],
+  "notes": {
+    "pricing_structure": "Flex workers scale up during traffic spikes and return to idle after completing jobs",
+    "billing": "Per-second billing for actual compute time used",
+    "use_case": "Cost-efficient and ideal for bursty workloads",
+    "gpus_for_rendering": {
+      "RTX_A5000": {
+        "included_in": ["L4", "A5000", "3090"],
+        "price_per_second": 0.00019,
+        "price_per_hour": 0.69,
+        "memory_gb": 24
+      },
+      "RTX_A4000": {
+        "included_in": ["A4000", "A4500", "RTX 4000", "RTX 2000"],
+        "price_per_second": 0.00016,
+        "price_per_hour": 0.58,
+        "memory_gb": 16
+      },
+      "RTX_3090": {
+        "included_in": ["L4", "A5000", "3090"],
+        "price_per_second": 0.00019,
+        "price_per_hour": 0.69,
+        "memory_gb": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# Spell-check config for the CGRSP thesis/code.
+# Usage:  pip install codespell && codespell
+# Flags only known common misspellings (low false-positive rate).
+[codespell]
+skip = .git,.venv,__pycache__,.pytest_cache,*/archive/*,*_original*,plagiarism_check,references,data/rendering_jobs,data/runpod_pricing,SPARS-Pub,models,outputs,*.json,*.pdf,*.csv,*.jsonl,*.bbl,*.aux,*.log,*.toc,*.lof,*.lot,*.out,*.blg,*.fls,*.fdb_latexmk,*.synctex.gz,*.png,*.jpg,*.jpeg,*.gif,*.ico
+# ttests = the LaTeX label tab:ttests (t-tests table); ttest = scipy.stats.ttest_rel
+# function name; neither is a misspelling.
+# theses = plural of thesis; fulfilment = British spelling used in the thesis.
+ignore-words-list = ttests,ttest,theses,fulfilment

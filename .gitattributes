@@ -1,0 +1,7 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Shell and Python entry points must keep LF endings so WSL/Git Bash can parse
+# them on Windows, where core.autocrlf=true would otherwise add CRLF.
+*.sh text eol=lf
+*.py text eol=lf

@@ -1,0 +1,74 @@
+{
+  "seed": 42,
+  "schedulers": {
+    "RH": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 950,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "CADR": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 950,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    },
+    "Adaptive": {
+      "all_passed": true,
+      "total_violations": 0,
+      "violations": [],
+      "constraint_results": {
+        "deadline_enforcement": {
+          "checked": true,
+          "description": "Verify each job's deadline_met flag and the reported miss count",
+          "status": "passed"
+        },
+        "assignment_uniqueness": {
+          "checked": true,
+          "description": "Verify each job dispatched once and each node holding \u22641 job at a time (dispatch log, [dispatch, completion) occupancy)",
+          "jobs_checked": 950,
+          "status": "passed"
+        },
+        "cost_calculation": {
+          "checked": true,
+          "description": "Verify cost = W(j,g) \u00d7 p_g (time-weighted)",
+          "status": "passed"
+        }
+      }
+    }
+  }
+}
