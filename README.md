@@ -36,7 +36,7 @@ make test
 | `data/` | 6,234-job calibration dataset, excluded rows, and the compact pricing summary. |
 | `thesis/generated/` | Generated statistics macros and table fragments. Do not edit by hand. |
 | `scripts/` | Build, filtering, and packaging helpers. |
-| `docs/` | Automated verification report and the output hash manifest. |
+| `docs/` | Automated verification report, the output hash manifest, and `thesis_revisions_highlighted.pdf` (the final thesis with every change since the 9 November 2026 defense marked: additions in blue, deletions in red). |
 | `REPRODUCE.md` | The full reproducibility package. |
 
 ## Data and code availability
