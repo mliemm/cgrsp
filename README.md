@@ -6,7 +6,7 @@
 
 Code, data and results for the master's thesis **Cloud GPU Rendering Scheduling Problem (CGRSP): A Mathematical Formulation and Empirical Evaluation on Heterogeneous GPU Fleets** (Department of Computer Science and Information Engineering, National Taiwan University of Science and Technology).
 
-Author: Michael (林墾森). Advisors: Prof. Yuan-Shin Hwang (黃元欣) and Prof. Vincent F. Yu (喻奉天).
+Author: Michael (林墾森). Advisor: Prof. Yuan-Shin Hwang (黃元欣). Co-advisor: Prof. Vincent F. Yu (喻奉天).
 
 ## Abstract
 
